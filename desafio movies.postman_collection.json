@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "ca5a444f-7b79-40b6-8fb7-032be9435064",
+		"name": "desafio movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2356088"
+	},
+	"item": [
+		{
+			"name": "__movie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "es-ES",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6000/api/movie?title=El Padrino",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "El Padrino"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "page",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "limit",
+						"value": "5",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://challenge-clay-production.up.railway.app/api/movies",
+					"protocol": "https",
+					"host": [
+						"challenge-clay-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"isAvalible\" : true,\n    \"es-ES\" : {\n        \"labels\" : [ \n            \"Titulo\", \n            \"Descripcion\", \n            \"Director\"\n        ],\n        \"filim_title\" : \"El Padrino 5\",\n        \"filim_description\" : \"Pelicula de Mafia\",\n        \"filim_director\" : \"Mario Pusso\"\n    },\n    \"en-US\" : {\n        \"labels\" : [ \n            \"Title\", \n            \"Descripcion\", \n            \"Director\"\n        ],\n        \"filim_title\" : \"The Godfather 2\",\n        \"filim_description\" : \"Pelicula de Mafia\",\n        \"filim_director\" : \"Mario Pusso\"\n    },\n    \"pt-BR\" : {\n        \"labels\" : [ \n            \"Título\", \n            \"Descrição\", \n            \"Diretor\"\n        ],\n        \"filim_title\" : \"El Padrino 2\",\n        \"filim_description\" : \"Pelicula de Mafia\",\n        \"filim_director\" : \"Mario Pusso\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://challenge-clay-production.up.railway.app/api/movie",
+					"protocol": "https",
+					"host": [
+						"challenge-clay-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"642371b94f943b853b62a986\",\n \"isAvalible\" : true,\n    \"es-ES\" : {\n        \"labels\" : [ \n            \"Titulo\", \n            \"Descripcion\", \n            \"Director\"\n        ],\n        \"filim_title\" : \"El Padrino 2x\",\n        \"filim_description\" : \"Pelicula de Mafia\",\n        \"filim_director\" : \"Mario Pusso\"\n    },\n    \"en-US\" : {\n        \"labels\" : [ \n            \"Title\", \n            \"Descripcion\", \n            \"Director\"\n        ],\n        \"filim_title\" : \"The Godfather 2x\",\n        \"filim_description\" : \"Pelicula de Mafia\",\n        \"filim_director\" : \"Mario Pusso\"\n    },\n    \"pt-BR\" : {\n        \"labels\" : [ \n            \"Título\", \n            \"Descrição\", \n            \"Diretor\"\n        ],\n        \"filim_title\" : \"El Padrino 2x\",\n        \"filim_description\" : \"Pelicula de Mafia\",\n        \"filim_director\" : \"Mario Pusso\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://challenge-clay-production.up.railway.app/api/movie",
+					"protocol": "https",
+					"host": [
+						"challenge-clay-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://challenge-clay-production.up.railway.app/api/movie?id=6423cefe9b95ed0021afd274",
+					"protocol": "https",
+					"host": [
+						"challenge-clay-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6423cefe9b95ed0021afd274"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
